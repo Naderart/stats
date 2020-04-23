@@ -70,7 +70,8 @@ movie_data = series(lst1, 'year', 'gross')
 
 # Try replace 'country' by 'lang' or 'urban'
 # Also try to change 'height' parameter
-#xyplot(world_data, 'country', 'population', height=16)
+xyplot(world_data, 'country', 'population', height=16)
+
 #xyplot(movie_data, 'year', 'gross', height=16)
 
 # Interactive Sinusoidal plot
@@ -78,7 +79,7 @@ from time import sleep
 from math import sin
 
 start, end = 100, 180
-while True: # Change to while True to start the animation. Weights in the sin() formula only to make it look good on a plot
+while False: # Change to while True to start the animation. Weights in the sin() formula only to make it look good on a plot
     x_list = [x for x in range(start,end,10)]
     y_list = [(10+10*sin(0.1*x)) for x in x_list]
     d = { 'x': x_list , 'y': y_list }
