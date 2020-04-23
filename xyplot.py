@@ -45,7 +45,7 @@ lst1 = [
     {'title':'Movie5', 'year':2024, 'rating':'G', 'gross':990},
     {'title':'Movie5', 'year':2023, 'rating':'G', 'gross':1000},
     {'title':'Movie5', 'year':2025, 'rating':'R', 'gross':100},
-    {'title':'Movie5', 'year':2026, 'rating':'R', 'gross':0},
+    {'title':'Movie5', 'year':2026, 'rating':'R', 'gross':0}
     ]
 
 lst2 = [
@@ -59,7 +59,7 @@ lst2 = [
     {'country':'BGD', 'population':164689383,  'lang':'bd', 'urban':39},
     {'country':'RUS', 'population':145934462,  'lang':'ru', 'urban':74},
     {'country':'MEX', 'population':128932753,  'lang':'es', 'urban':84},
-    {'country':'JPN', 'population':126476461,  'lang':'jp', 'urban':92},
+    {'country':'JPN', 'population':126476461,  'lang':'jp', 'urban':92}
     ]
 
 # Lists (lst1 - lst2) are in a similar format to what python's csv module can read
@@ -71,14 +71,14 @@ movie_data = series(lst1, 'year', 'gross')
 # Try replace 'country' by 'lang' or 'urban'
 # Also try to change 'height' parameter
 #xyplot(world_data, 'country', 'population', height=16)
-xyplot(movie_data, 'year', 'gross', height=16)
+#xyplot(movie_data, 'year', 'gross', height=16)
 
 # Interactive Sinusoidal plot
 from time import sleep
 from math import sin
 
 start, end = 100, 180
-while False: # Change to while True to start the animation. Weights in the sin() formula only to make it look good on a plot
+while True: # Change to while True to start the animation. Weights in the sin() formula only to make it look good on a plot
     x_list = [x for x in range(start,end,10)]
     y_list = [(10+10*sin(0.1*x)) for x in x_list]
     d = { 'x': x_list , 'y': y_list }
